@@ -1,0 +1,7 @@
+auth/.env
+*.db
+*test*
+venv
+*cache*
+*client*
+*Client*

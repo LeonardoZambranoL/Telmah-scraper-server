@@ -1,0 +1,21 @@
+//python -m grpc_tools.protoc -I./proto --python_out=. --grpc_python_out=. ./proto/requests.proto
+
+syntax = "proto3";
+
+service AuthService{
+  rpc auth (AuthRequest) returns (OptionalToken){}
+}
+
+message AuthRequest{
+  Credentials credentials = 1;
+}
+
+message Credentials{
+  string email = 1;
+  string password = 2;
+}
+
+message OptionalToken{
+  bool authenticated = 1;
+  string session_token = 2;
+}
