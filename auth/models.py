@@ -22,7 +22,7 @@ class User(Base):
         self.password_hash = password_hash
 
     def __repr__(self):
-        return f"id: {self.id} email: {self.email} nombre: {self.firstname} lastname: {self.lastname} rucs: {self.rucs}      {self.password_hash}"
+        return f"id: {self.id} email: {self.email} nombre: {self.firstname} lastname: {self.lastname} rucs: {self.rucs}"
 
 
 class Ruc(Base):
